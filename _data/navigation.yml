@@ -1,0 +1,20 @@
+# Michael Anderson Portfolio
+# Shared website navigation
+
+- title: "Home"
+  url: "/"
+
+- title: "About"
+  url: "/about/"
+
+- title: "Experience"
+  url: "/experience/"
+
+- title: "Projects"
+  url: "/projects/"
+
+- title: "Qualifications"
+  url: "/qualifications/"
+
+- title: "Contact"
+  url: "/contact/"

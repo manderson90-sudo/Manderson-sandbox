@@ -1,0 +1,78 @@
+<!-- ======================================================
+     MICHAEL ANDERSON
+     SHARED WEBSITE FOOTER
+
+     Navigation links are managed in:
+     _data/navigation.yml
+     ====================================================== -->
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <!-- NAME AND ROLE -->
+
+    <div>
+
+      <strong>
+        Michael Anderson
+      </strong>
+
+      <p>
+        Technology Leader
+      </p>
+
+    </div>
+
+
+    <!-- FOOTER NAVIGATION -->
+
+    <nav aria-label="Footer navigation">
+
+      {% for item in site.data.navigation %}
+
+        <a
+          href="{{ item.url | relative_url }}"
+          {% if page.url == item.url %}
+            aria-current="page"
+          {% endif %}
+        >
+          {{ item.title }}
+        </a>
+
+      {% endfor %}
+
+    </nav>
+
+
+    <!-- CONTACT LINKS -->
+
+    <div>
+
+      <a
+        href="https://www.linkedin.com/in/michaelanderson90"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a href="mailto:m.anderson90@icloud.com">
+        Email
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- COPYRIGHT -->
+
+  <div class="container copyright">
+
+    &copy; {{ 'now' | date: '%Y' }} Michael Anderson.
+    All rights reserved.
+
+  </div>
+
+</footer>

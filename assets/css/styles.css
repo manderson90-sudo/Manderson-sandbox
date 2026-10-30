@@ -2829,3 +2829,130 @@ h4 {
   }
 
 }
+/* ==========================================================
+   CONTACT PAGE
+   ========================================================== */
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(40px, 7vw, 100px);
+}
+
+.contact-page-intro {
+  max-width: 560px;
+}
+
+.contact-page-intro h2 {
+  margin: 18px 0 28px;
+
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 750;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+}
+
+.contact-page-intro p {
+  margin-bottom: 24px;
+
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.contact-page-options {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-page-card {
+  padding: 32px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-page-card h3 {
+  margin: 16px 0;
+
+  color: var(--navy);
+  font-size: 23px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.contact-page-card p {
+  margin-bottom: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.contact-page-card-primary {
+  padding: 38px;
+  border-color: #b8cbe5;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-page-card-primary p {
+  margin-bottom: 26px;
+}
+
+.contact-page-closing {
+  text-align: center;
+}
+
+.contact-page-closing .container {
+  max-width: 760px;
+}
+
+.contact-page-closing h2 {
+  margin: 18px 0;
+
+  font-size: clamp(32px, 4vw, 46px);
+  letter-spacing: -1.5px;
+}
+
+.contact-page-closing p {
+  margin: 0 auto;
+
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* CONTACT PAGE: MOBILE */
+
+@media (max-width: 760px) {
+
+  .contact-page-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contact-page-intro h2 {
+    font-size: 34px;
+  }
+
+  .contact-page-intro p {
+    font-size: 15px;
+  }
+
+  .contact-page-card,
+  .contact-page-card-primary {
+    padding: 26px;
+  }
+
+  .contact-page-card h3 {
+    font-size: 21px;
+  }
+
+  .contact-page-closing h2 {
+    font-size: 34px;
+  }
+
+}

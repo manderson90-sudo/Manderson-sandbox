@@ -1,0 +1,23 @@
+# Michael Anderson Portfolio
+# Jekyll configuration
+
+title: "Michael Anderson"
+
+description: >-
+  Technology leader specialising in digital transformation,
+  technology governance, supplier management and business performance.
+
+url: "https://manderson90-sudo.github.io"
+
+baseurl: "/Manderson-sandbox"
+
+lang: "en-GB"
+
+markdown: kramdown
+
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

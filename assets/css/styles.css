@@ -1573,7 +1573,16 @@ small {
   .section {
     padding: 28px 0;
   }
+/* Profile picture in navigation */
 
+.brand-photo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #dce3eb;
+}
   .card,
   .metric,
   .testimonial,

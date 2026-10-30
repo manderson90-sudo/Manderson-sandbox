@@ -5,31 +5,60 @@ description: Learn about Michael Anderson's career, leadership approach and expe
 permalink: /about/
 ---
 
+<!-- ======================================================
+     MICHAEL ANDERSON
+     ABOUT PAGE
+
+     Shared header and footer are loaded by Jekyll.
+     ====================================================== -->
+
+
 <!-- ABOUT PAGE INTRODUCTION -->
 
-<section class="page-hero">
+<section class="page-hero about-page-hero">
 
-  <div class="container">
+  <div class="container about-hero-grid">
 
-    <span class="eyebrow">
-      ABOUT ME
-    </span>
+    <div class="about-hero-content">
 
-    <h1>
-      A little about me<span style="color:var(--blue)">.</span>
-    </h1>
+      <span class="eyebrow">
+        ABOUT ME
+      </span>
 
-    <p>
-      I'm a technology leader based in the North East of England,
-      with a career spanning financial services, professional
-      football and retail. My experience has given me an
-      appreciation of how technology, people and business
-      performance come together.
-    </p>
+      <h1>
+        A little about me<span style="color:var(--blue)">.</span>
+      </h1>
+
+      <p>
+        I'm a technology leader based in the North East of England,
+        with a career spanning financial services, professional
+        football and retail. My experience has given me an
+        appreciation of how technology, people and business
+        performance come together.
+      </p>
+
+    </div>
+
+
+    <!-- PROFILE PHOTOGRAPH -->
+
+    <div class="about-hero-image">
+
+      <img
+        src="{{ '/assets/images/profile.jpg' | relative_url }}"
+        alt="Portrait of Michael Anderson"
+        width="480"
+        height="600"
+        loading="eager"
+        decoding="async"
+      >
+
+    </div>
 
   </div>
 
 </section>
+
 
 
 <!-- MY STORY -->
@@ -99,6 +128,7 @@ permalink: /about/
 </section>
 
 
+
 <!-- LEADERSHIP APPROACH -->
 
 <section class="section tinted">
@@ -124,7 +154,10 @@ permalink: /about/
 
     </div>
 
+
     <div class="card-grid">
+
+      <!-- PEOPLE -->
 
       <article class="card">
 
@@ -146,6 +179,9 @@ permalink: /about/
 
       </article>
 
+
+      <!-- COLLABORATION -->
+
       <article class="card">
 
         <span class="eyebrow">
@@ -165,6 +201,9 @@ permalink: /about/
         </p>
 
       </article>
+
+
+      <!-- IMPROVEMENT -->
 
       <article class="card">
 
@@ -193,6 +232,7 @@ permalink: /about/
 </section>
 
 
+
 <!-- CAREER HIGHLIGHTS -->
 
 <section class="section">
@@ -216,7 +256,10 @@ permalink: /about/
 
     </div>
 
+
     <div class="metric-grid">
+
+      <!-- APPLICATIONS -->
 
       <article class="metric">
 
@@ -235,6 +278,9 @@ permalink: /about/
 
       </article>
 
+
+      <!-- SUPPLIERS -->
+
       <article class="metric">
 
         <span class="metric-value">
@@ -251,6 +297,9 @@ permalink: /about/
         </p>
 
       </article>
+
+
+      <!-- SAVINGS -->
 
       <article class="metric">
 
@@ -269,6 +318,9 @@ permalink: /about/
         </p>
 
       </article>
+
+
+      <!-- BUDGET -->
 
       <article class="metric">
 
@@ -290,6 +342,7 @@ permalink: /about/
 
     </div>
 
+
     <a
       class="text-link"
       href="{{ '/experience/' | relative_url }}"
@@ -301,6 +354,7 @@ permalink: /about/
   </div>
 
 </section>
+
 
 
 <!-- RECOMMENDATIONS -->
@@ -323,17 +377,20 @@ permalink: /about/
       </h2>
 
       <p>
-        I've been fortunate to work alongside
-        some brilliant people throughout my career.
-        Their feedback means a great deal to me
-        and reflects the relationships I've built
-        along the way.
+        I've been fortunate to work alongside some brilliant
+        people throughout my career. With over 50 recommendations
+        on LinkedIn, I'm proud of the relationships I've built
+        and the feedback I've received. Here are five that reflect
+        different aspects of my experience and approach to leadership.
       </p>
 
     </div>
 
 
+    <!-- ALL FIVE RECOMMENDATIONS IN ONE GRID -->
+
     <div class="testimonials">
+
 
       <!-- DANIEL BAILEY -->
 
@@ -353,7 +410,9 @@ permalink: /about/
 
         <figcaption>
 
-          <strong>Daniel Bailey</strong>
+          <strong>
+            Daniel Bailey
+          </strong>
 
           <span>
             Head of Technology,
@@ -367,6 +426,7 @@ permalink: /about/
         </figcaption>
 
       </figure>
+
 
 
       <!-- RACHEL WILSON -->
@@ -386,7 +446,9 @@ permalink: /about/
 
         <figcaption>
 
-          <strong>Rachel Wilson</strong>
+          <strong>
+            Rachel Wilson
+          </strong>
 
           <span>
             IT Applications &amp; Digital Development Manager,
@@ -401,112 +463,134 @@ permalink: /about/
 
       </figure>
 
+
+
+      <!-- MARTIN ROBINSON -->
+
+      <figure class="testimonial">
+
+        <span class="eyebrow">
+          COMMERCIAL LEADERSHIP
+        </span>
+
+        <blockquote>
+          Michael is one of the most professional,
+          detailed and well communicated people
+          I have ever worked with in over 23 years
+          and he would be a very valued team member
+          in any business no matter what the industry.
+        </blockquote>
+
+        <figcaption>
+
+          <strong>
+            Martin Robinson
+          </strong>
+
+          <span>
+            Executive Leader, Golf, Leisure &amp; Hospitality
+          </span>
+
+          <small>
+            Former colleague
+          </small>
+
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- STEVE SWINYARD -->
+
+      <figure class="testimonial">
+
+        <span class="eyebrow">
+          RELATIONSHIPS &amp; COLLABORATION
+        </span>
+
+        <blockquote>
+          His technical knowledge is outstanding,
+          as is his ability to build effective
+          relationships that support proactive,
+          collaborative delivery.
+        </blockquote>
+
+        <figcaption>
+
+          <strong>
+            Steve Swinyard
+          </strong>
+
+          <span>
+            Head of Safeguarding &amp; Welfare,
+            Newcastle United Football Club
+          </span>
+
+          <small>
+            Former senior colleague
+          </small>
+
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- SCOTT TAYLOR -->
+
+      <figure class="testimonial">
+
+        <span class="eyebrow">
+          PROJECT DELIVERY
+        </span>
+
+        <blockquote>
+          During our time together at American Golf
+          he managed a number of successful projects
+          with tenacity, professionalism, courtesy
+          and a solution-focused approach.
+        </blockquote>
+
+        <figcaption>
+
+          <strong>
+            Scott Taylor
+          </strong>
+
+          <span>
+            Marketing &amp; CRM Director,
+            American Golf
+          </span>
+
+          <small>
+            Former senior colleague
+          </small>
+
+        </figcaption>
+
+      </figure>
+
+
     </div>
 
 
-    <!-- ADDITIONAL RECOMMENDATIONS -->
+    <!-- VIEW ALL RECOMMENDATIONS -->
 
-<div class="testimonials additional-testimonials">
+    <a
+      class="text-link"
+      href="https://www.linkedin.com/in/michaelanderson90/#recommendations"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View all 50+ recommendations on LinkedIn
+      <span aria-hidden="true">↗</span>
+    </a>
 
-  <!-- MARTIN ROBINSON -->
+  </div>
 
-  <figure class="testimonial">
+</section>
 
-    <span class="eyebrow">
-      COMMERCIAL LEADERSHIP
-    </span>
-
-    <blockquote>
-      Michael is one of the most professional,
-      detailed and well communicated people
-      I have ever worked with in over 23 years
-      and he would be a very valued team member
-      in any business no matter what the industry.
-    </blockquote>
-
-    <figcaption>
-
-      <strong>Martin Robinson</strong>
-
-      <span>
-        Executive Leader, Golf, Leisure &amp; Hospitality
-      </span>
-
-      <small>
-        Former colleague
-      </small>
-
-    </figcaption>
-
-  </figure>
-
-
-  <!-- STEVE SWINYARD -->
-
-  <figure class="testimonial">
-
-    <span class="eyebrow">
-      RELATIONSHIPS &amp; COLLABORATION
-    </span>
-
-    <blockquote>
-      His technical knowledge is outstanding,
-      as is his ability to build effective
-      relationships that support proactive,
-      collaborative delivery.
-    </blockquote>
-
-    <figcaption>
-
-      <strong>Steve Swinyard</strong>
-
-      <span>
-        Head of Safeguarding &amp; Welfare,
-        Newcastle United Football Club
-      </span>
-
-      <small>
-        Former senior colleague
-      </small>
-
-    </figcaption>
-
-  </figure>
-
-
-  <!-- SCOTT TAYLOR -->
-
-  <figure class="testimonial">
-
-    <span class="eyebrow">
-      PROJECT DELIVERY
-    </span>
-
-    <blockquote>
-      During our time together at American Golf
-      he managed a number of successful projects
-      with tenacity, professionalism, courtesy
-      and a solution-focused approach.
-    </blockquote>
-
-    <figcaption>
-
-      <strong>Scott Taylor</strong>
-
-      <span>
-        Marketing &amp; CRM Director,
-        American Golf
-      </span>
-
-      <small>
-        Former senior colleague
-      </small>
-
-    </figcaption>
-
-  </figure>
-
-</div>
 
 
 <!-- CONTACT -->

@@ -1449,3 +1449,346 @@ h3 {
   }
 
 }
+/* ==========================================================
+   EXPERIENCE PAGE
+   ========================================================== */
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* EXPANDABLE CAREER CARDS */
+
+.experience-role {
+  overflow: hidden;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.experience-role[open] {
+  border-color: #b9cce5;
+  box-shadow: var(--shadow-md);
+}
+
+
+/* CARD HEADER */
+
+.experience-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding: 34px;
+
+  cursor: pointer;
+
+  list-style: none;
+}
+
+.experience-summary::-webkit-details-marker {
+  display: none;
+}
+
+.experience-summary::marker {
+  content: "";
+}
+
+.experience-summary:hover {
+  background: #f9fbfe;
+}
+
+.experience-summary:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: -5px;
+}
+
+.experience-summary-content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  min-width: 0;
+  gap: 8px;
+}
+
+.experience-role-title {
+  display: block;
+
+  margin-top: 8px;
+
+  color: var(--navy);
+
+  font-size: clamp(21px, 2.4vw, 29px);
+  font-weight: 750;
+
+  letter-spacing: -.6px;
+  line-height: 1.3;
+}
+
+.experience-company {
+  color: var(--blue);
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.experience-role-preview {
+  max-width: 720px;
+
+  margin-top: 8px;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* EXPAND ICON */
+
+.experience-expand-icon {
+  display: grid;
+  place-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  color: var(--blue);
+
+  background: var(--surface-muted);
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  font-size: 25px;
+  font-weight: 400;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.experience-role[open] .experience-expand-icon {
+  transform: rotate(45deg);
+
+  background: #e8f0fc;
+}
+
+
+/* EXPANDED CONTENT */
+
+.experience-role-body {
+  padding: 32px 34px 38px;
+
+  border-top: 1px solid var(--border);
+}
+
+.experience-role-body > p {
+  max-width: 800px;
+
+  margin-bottom: 28px;
+
+  color: var(--text-muted);
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.experience-role-body h3 {
+  margin: 0 0 18px;
+
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.experience-role-body ul {
+  display: grid;
+  gap: 16px;
+
+  max-width: 900px;
+
+  margin: 0;
+  padding-left: 22px;
+}
+
+.experience-role-body li {
+  padding-left: 6px;
+
+  color: var(--text);
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.experience-role-body li::marker {
+  color: var(--blue);
+}
+
+.experience-role-body li strong {
+  color: var(--navy);
+  font-weight: 750;
+}
+
+
+/* SKILLS AND EXPERTISE TAGS */
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 32px;
+}
+
+.experience-tags span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 12px;
+
+  color: var(--blue);
+
+  background: #edf3fc;
+
+  border: 1px solid #d8e5f7;
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: .6px;
+  line-height: 1.5;
+}
+
+
+/* EARLIER CAREER */
+
+.experience-earlier-role {
+  padding: 0 0 22px;
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-earlier-role:last-of-type {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.experience-earlier-role h3 {
+  margin-bottom: 8px;
+}
+
+.experience-earlier-role p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ACHIEVEMENTS GRID */
+
+.experience-achievements-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .experience-achievements-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+  .experience-timeline {
+    gap: 16px;
+  }
+
+  .experience-summary {
+    align-items: flex-start;
+
+    gap: 14px;
+    padding: 25px 22px;
+  }
+
+  .experience-role-title {
+    font-size: 21px;
+  }
+
+  .experience-company {
+    font-size: 14px;
+  }
+
+  .experience-role-preview {
+    font-size: 13px;
+  }
+
+  .experience-expand-icon {
+    width: 36px;
+    height: 36px;
+
+    min-width: 36px;
+
+    font-size: 22px;
+  }
+
+  .experience-role-body {
+    padding: 26px 22px 30px;
+  }
+
+  .experience-role-body > p {
+    font-size: 15px;
+  }
+
+  .experience-role-body li {
+    font-size: 14px;
+  }
+
+  .experience-tags {
+    gap: 8px;
+  }
+
+  .experience-tags span {
+    font-size: 9px;
+  }
+
+  .experience-achievements-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+}

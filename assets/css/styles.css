@@ -5,7 +5,9 @@
    ========================================================== */
 
 
-/* DESIGN SYSTEM */
+/* ==========================================================
+   DESIGN SYSTEM
+   ========================================================== */
 
 :root {
   color-scheme: light;
@@ -33,7 +35,9 @@
 }
 
 
-/* RESET */
+/* ==========================================================
+   RESET
+   ========================================================== */
 
 *,
 *::before,
@@ -49,8 +53,16 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -103,11 +115,14 @@ h3 {
     calc(100% - 48px),
     var(--container)
   );
+
   margin-inline: auto;
 }
 
 
-/* ACCESSIBILITY */
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
 
 .skip-link {
   position: fixed;
@@ -225,7 +240,9 @@ h3 {
 }
 
 
-/* DESKTOP NAVIGATION */
+/* ==========================================================
+   DESKTOP NAVIGATION
+   ========================================================== */
 
 .desktop-nav {
   display: flex;
@@ -253,7 +270,9 @@ h3 {
 }
 
 
-/* HEADER ACTIONS */
+/* ==========================================================
+   HEADER ACTIONS
+   ========================================================== */
 
 .header-actions {
   display: flex;
@@ -278,7 +297,9 @@ h3 {
 }
 
 
-/* MOBILE MENU BUTTON */
+/* ==========================================================
+   MOBILE MENU BUTTON
+   ========================================================== */
 
 .menu-toggle {
   display: none;
@@ -305,7 +326,9 @@ h3 {
 }
 
 
-/* MOBILE NAVIGATION */
+/* ==========================================================
+   MOBILE NAVIGATION
+   ========================================================== */
 
 .mobile-nav {
   background: var(--surface);
@@ -373,7 +396,6 @@ h3 {
 
 .section-intro {
   max-width: 740px;
-
   margin-bottom: 42px;
 }
 
@@ -480,7 +502,7 @@ h3 {
 
 
 /* ==========================================================
-   HERO
+   HOMEPAGE HERO
    ========================================================== */
 
 .hero {
@@ -543,14 +565,13 @@ h3 {
 
 
 /* ==========================================================
-   HERO PHOTOGRAPH AND AT A GLANCE
+   HOMEPAGE HERO PHOTOGRAPH
    ========================================================== */
 
 .hero-aside {
   display: block;
 
   padding: 0;
-
   overflow: hidden;
 
   background: var(--surface);
@@ -563,9 +584,7 @@ h3 {
 
 .hero-photo-wrap {
   width: 100%;
-
   padding: 0;
-
   overflow: hidden;
 
   background: var(--surface-muted);
@@ -748,7 +767,6 @@ h3 {
   grid-template-columns: 1.25fr .75fr;
 
   gap: 36px;
-
   align-items: stretch;
 
   padding: 36px;
@@ -786,12 +804,11 @@ h3 {
 
   padding: 28px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #14243a,
-      #2459a6
-    );
+  background: linear-gradient(
+    135deg,
+    #14243a,
+    #2459a6
+  );
 
   border-radius: var(--radius);
 }
@@ -859,13 +876,11 @@ h3 {
 
 .testimonial figcaption strong {
   color: var(--navy);
-
   font-size: 15px;
 }
 
 .testimonial figcaption span {
   color: var(--text-muted);
-
   font-size: 13px;
 }
 
@@ -935,7 +950,6 @@ h3 {
 
 .footer-grid strong {
   color: #ffffff;
-
   font-size: 16px;
 }
 
@@ -943,7 +957,6 @@ h3 {
   margin: 8px 0 0;
 
   color: #b8c5d7;
-
   font-size: 13px;
 }
 
@@ -989,7 +1002,7 @@ h3 {
 
 
 /* ==========================================================
-   ADDITIONAL PAGE COMPONENTS
+   SHARED PAGE COMPONENTS
    ========================================================== */
 
 .page-hero {
@@ -1040,7 +1053,6 @@ h3 {
 
 .card h3 {
   margin-bottom: 12px;
-
   font-size: 20px;
 }
 
@@ -1049,6 +1061,140 @@ h3 {
 
   font-size: 14px;
   line-height: 1.8;
+}
+
+
+/* ==========================================================
+   ABOUT PAGE: CAREER STORY
+   ========================================================== */
+
+.about-story-grid {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: clamp(40px, 7vw, 100px);
+
+  align-items: start;
+}
+
+.about-heading {
+  margin-top: 18px;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  letter-spacing: -1.5px;
+}
+
+.about-copy {
+  max-width: 720px;
+}
+
+.about-copy p {
+  margin-bottom: 24px;
+
+  color: var(--text-muted);
+
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   ABOUT PAGE: PROFILE PHOTOGRAPH
+   ========================================================== */
+
+.about-page-hero {
+  padding: 85px 0;
+}
+
+.about-hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(280px, 0.7fr);
+
+  align-items: center;
+
+  gap: clamp(40px, 6vw, 90px);
+}
+
+.about-hero-content {
+  min-width: 0;
+}
+
+.about-hero-content h1 {
+  margin: 20px 0 24px;
+}
+
+.about-hero-content p {
+  max-width: 650px;
+}
+
+.about-hero-image {
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow-md);
+
+  background: var(--surface-muted);
+}
+
+.about-hero-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+
+/* ==========================================================
+   ABOUT PAGE: ADDITIONAL COMPONENTS
+   ========================================================== */
+
+.recommendation-more {
+  margin-top: 32px;
+
+  padding: 32px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.recommendation-more h3 {
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+.recommendation-more p {
+  max-width: 650px;
+
+  color: var(--text-muted);
+
+  line-height: 1.8;
+}
+
+.recommendation-more .text-link {
+  margin-top: 10px;
+}
+
+#recommendations {
+  scroll-margin-top: 30px;
 }
 
 
@@ -1082,6 +1228,23 @@ h3 {
 
 
 /* ==========================================================
+   RESPONSIVE: ABOUT PAGE TABLET
+   ========================================================== */
+
+@media (max-width: 1000px) {
+
+  .about-hero-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(220px, 0.8fr);
+
+    gap: 35px;
+  }
+
+}
+
+
+/* ==========================================================
    RESPONSIVE: MOBILE
    ========================================================== */
 
@@ -1102,6 +1265,8 @@ h3 {
   .header-link {
     display: none;
   }
+
+  /* HOMEPAGE HERO */
 
   .hero {
     padding: 72px 0 80px;
@@ -1138,6 +1303,8 @@ h3 {
     padding: 28px;
   }
 
+  /* SHARED SECTIONS */
+
   .section {
     padding: 72px 0;
   }
@@ -1154,6 +1321,8 @@ h3 {
     font-size: 16px;
   }
 
+  /* METRICS */
+
   .metric-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -1162,6 +1331,8 @@ h3 {
   .metric {
     padding: 28px;
   }
+
+  /* EXPERIENCE */
 
   .feature-row {
     grid-template-columns: 1fr;
@@ -1174,6 +1345,8 @@ h3 {
     font-size: 19px;
   }
 
+  /* PROJECTS */
+
   .project-feature {
     grid-template-columns: 1fr;
 
@@ -1184,6 +1357,8 @@ h3 {
   .project-graphic {
     min-height: 200px;
   }
+
+  /* RECOMMENDATIONS */
 
   .testimonials {
     grid-template-columns: 1fr;
@@ -1197,6 +1372,8 @@ h3 {
     font-size: 16px;
   }
 
+  /* FOOTER */
+
   .footer-grid {
     grid-template-columns: 1fr;
 
@@ -1205,6 +1382,8 @@ h3 {
     padding-top: 40px;
     padding-bottom: 35px;
   }
+
+  /* SHARED PAGE COMPONENTS */
 
   .card-grid {
     grid-template-columns: 1fr;
@@ -1216,6 +1395,39 @@ h3 {
 
   .page-hero p {
     font-size: 16px;
+  }
+
+  /* ABOUT PAGE INTRODUCTION */
+
+  .about-page-hero {
+    padding: 65px 0;
+  }
+
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-hero-image {
+    width: 100%;
+    max-width: 480px;
+
+    margin-inline: auto;
+  }
+
+  /* ABOUT PAGE CAREER STORY */
+
+  .about-story-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-copy p {
+    font-size: 16px;
+  }
+
+  .recommendation-more {
+    padding: 26px;
   }
 
 }
@@ -1259,7 +1471,7 @@ h3 {
 
 
 /* ==========================================================
-   REDUCED MOTION ACCESSIBILITY
+   ACCESSIBILITY: REDUCED MOTION
    ========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1276,97 +1488,17 @@ h3 {
   }
 
 }
+
+
 /* ==========================================================
-   ABOUT PAGE
+   ACCESSIBILITY: HIGH CONTRAST PREFERENCE
    ========================================================== */
 
-.about-story-grid {
-  display: grid;
+@media (prefers-contrast: more) {
 
-  grid-template-columns: 0.8fr 1.2fr;
-
-  gap: clamp(40px, 7vw, 100px);
-
-  align-items: start;
-}
-
-.about-heading {
-  margin-top: 18px;
-
-  font-size: clamp(32px, 4vw, 48px);
-
-  letter-spacing: -1.5px;
-}
-
-.about-copy {
-  max-width: 720px;
-}
-
-.about-copy p {
-  margin-bottom: 24px;
-
-  color: var(--text-muted);
-
-  font-size: 17px;
-  line-height: 1.9;
-}
-
-.about-copy p:last-child {
-  margin-bottom: 0;
-}
-
-.recommendation-more {
-  margin-top: 32px;
-
-  padding: 32px;
-
-  background: var(--surface);
-
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-}
-
-.recommendation-more h3 {
-  margin-bottom: 12px;
-
-  font-size: 21px;
-}
-
-.recommendation-more p {
-  max-width: 650px;
-
-  color: var(--text-muted);
-
-  line-height: 1.8;
-}
-
-.recommendation-more .text-link {
-  margin-top: 10px;
-}
-
-#recommendations {
-  scroll-margin-top: 30px;
-}
-
-@media (max-width: 760px) {
-
-  .about-story-grid {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
+  :root {
+    --text-muted: #35445a;
+    --border: #8997a9;
   }
 
-  .about-copy p {
-    font-size: 16px;
-  }
-
-  .recommendation-more {
-    padding: 26px;
-  }
-
-}
-/* Additional LinkedIn recommendations */
-
-.additional-testimonials {
-  margin-top: 22px;
 }

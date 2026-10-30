@@ -1,7 +1,6 @@
 /* ==========================================================
    MICHAEL ANDERSON
-   PORTFOLIO WEBSITE
-   COMPLETE STYLESHEET
+   COMPLETE PORTFOLIO STYLESHEET
    ========================================================== */
 
 
@@ -20,7 +19,6 @@
 
   --text: #243348;
   --text-muted: #5d6b7d;
-
   --border: #dce3eb;
 
   --radius: 14px;
@@ -79,7 +77,8 @@ a:hover {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+summary:focus-visible {
   outline: 3px solid var(--blue);
   outline-offset: 4px;
 }
@@ -95,23 +94,21 @@ button {
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--navy);
   line-height: 1.15;
 }
 
 .container {
-  width: min(
-    calc(100% - 48px),
-    var(--container)
-  );
-
+  width: min(calc(100% - 48px), var(--container));
   margin-inline: auto;
 }
 
@@ -145,7 +142,6 @@ h3 {
   z-index: 100;
 
   background: rgba(255, 255, 255, .97);
-
   border-bottom: 1px solid var(--border);
 }
 
@@ -184,7 +180,6 @@ h3 {
   color: #ffffff;
 
   border-radius: 12px;
-
   font-weight: 800;
 }
 
@@ -197,7 +192,6 @@ h3 {
 
   width: 44px;
   height: 44px;
-
   min-width: 44px;
   min-height: 44px;
 
@@ -207,7 +201,6 @@ h3 {
   object-position: center;
 
   border: 2px solid var(--border);
-
   flex-shrink: 0;
 }
 
@@ -227,7 +220,6 @@ h3 {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
 }
 
@@ -285,7 +277,7 @@ h3 {
 }
 
 
-/* MOBILE MENU BUTTON */
+/* MOBILE MENU */
 
 .menu-toggle {
   display: none;
@@ -310,9 +302,6 @@ h3 {
 .menu-toggle:hover {
   background: var(--surface-muted);
 }
-
-
-/* MOBILE NAVIGATION */
 
 .mobile-nav {
   background: var(--surface);
@@ -385,7 +374,6 @@ h3 {
   margin: 16px 0 18px;
 
   font-size: clamp(32px, 4vw, 49px);
-
   font-weight: 750;
   letter-spacing: -1.5px;
 }
@@ -406,7 +394,6 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
   gap: 14px;
 }
 
@@ -414,11 +401,9 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 12px;
 
   min-height: 49px;
-
   padding: 13px 20px;
 
   border: 1px solid transparent;
@@ -452,7 +437,6 @@ h3 {
 .btn-secondary {
   color: var(--navy);
   background: #ffffff;
-
   border-color: var(--border);
 }
 
@@ -472,7 +456,6 @@ h3 {
 
   font-size: 14px;
   font-weight: 750;
-
   text-decoration: none;
 }
 
@@ -507,7 +490,6 @@ h3 {
     minmax(280px, .75fr);
 
   align-items: center;
-
   gap: clamp(40px, 7vw, 100px);
 }
 
@@ -515,7 +497,6 @@ h3 {
   margin: 22px 0 28px;
 
   font-size: clamp(44px, 5.4vw, 76px);
-
   font-weight: 800;
 
   letter-spacing: -3px;
@@ -526,13 +507,11 @@ h3 {
   display: block;
 
   color: var(--blue);
-
   font-style: normal;
 }
 
 .hero-lead {
   max-width: 650px;
-
   margin-bottom: 34px;
 
   color: var(--text-muted);
@@ -542,7 +521,7 @@ h3 {
 }
 
 
-/* HOMEPAGE HERO PHOTOGRAPH */
+/* HOMEPAGE PHOTOGRAPH */
 
 .hero-aside {
   display: block;
@@ -596,13 +575,11 @@ h3 {
 .hero-aside-detail:last-child {
   padding-bottom: 0;
   margin-bottom: 0;
-
   border-bottom: 0;
 }
 
 .hero-aside-detail strong {
   display: block;
-
   margin-bottom: 6px;
 
   color: var(--navy);
@@ -625,9 +602,7 @@ h3 {
 
 .metric-grid {
   display: grid;
-
   grid-template-columns: repeat(4, minmax(0, 1fr));
-
   gap: 20px;
 }
 
@@ -644,7 +619,6 @@ h3 {
 
 .metric-value {
   display: block;
-
   margin-bottom: 18px;
 
   color: var(--blue);
@@ -673,7 +647,7 @@ h3 {
 }
 
 
-/* EXPERIENCE */
+/* HOMEPAGE EXPERIENCE */
 
 .feature-list {
   overflow: hidden;
@@ -688,9 +662,7 @@ h3 {
 
 .feature-row {
   display: grid;
-
   grid-template-columns: 180px 1fr;
-
   gap: 28px;
 
   padding: 28px 34px;
@@ -709,7 +681,6 @@ h3 {
 
   font-size: 11px;
   font-weight: 800;
-
   letter-spacing: 1px;
 }
 
@@ -724,7 +695,6 @@ h3 {
   margin-bottom: 0;
 
   color: var(--text-muted);
-
   font-size: 14px;
 }
 
@@ -733,7 +703,6 @@ h3 {
 
 .project-feature {
   display: grid;
-
   grid-template-columns: 1.25fr .75fr;
 
   gap: 36px;
@@ -753,7 +722,6 @@ h3 {
   margin: 18px 0;
 
   font-size: clamp(25px, 3vw, 35px);
-
   letter-spacing: -1px;
 }
 
@@ -761,7 +729,6 @@ h3 {
   max-width: 600px;
 
   color: var(--text-muted);
-
   line-height: 1.85;
 }
 
@@ -771,15 +738,9 @@ h3 {
   justify-content: center;
 
   min-height: 270px;
-
   padding: 28px;
 
-  background: linear-gradient(
-    135deg,
-    #14243a,
-    #2459a6
-  );
-
+  background: linear-gradient(135deg, #14243a, #2459a6);
   border-radius: var(--radius);
 }
 
@@ -798,9 +759,7 @@ h3 {
 
 .testimonials {
   display: grid;
-
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
   gap: 22px;
 }
 
@@ -821,7 +780,6 @@ h3 {
 
 .testimonial blockquote {
   flex-grow: 1;
-
   margin: 20px 0 30px;
 
   color: var(--navy);
@@ -834,11 +792,9 @@ h3 {
 .testimonial figcaption {
   display: flex;
   flex-direction: column;
-
   gap: 4px;
 
   padding-top: 22px;
-
   border-top: 1px solid var(--border);
 }
 
@@ -874,13 +830,11 @@ h3 {
   margin: 18px 0;
 
   font-size: clamp(38px, 5vw, 58px);
-
   letter-spacing: -2px;
 }
 
 .contact-band p {
   max-width: 600px;
-
   margin: 0 auto 30px;
 
   color: var(--text-muted);
@@ -903,7 +857,6 @@ h3 {
 
 .footer-grid {
   display: grid;
-
   grid-template-columns: 1.2fr 1.5fr .6fr;
 
   gap: 40px;
@@ -927,7 +880,6 @@ h3 {
 .footer-grid nav {
   display: flex;
   flex-wrap: wrap;
-
   align-content: start;
   gap: 12px 22px;
 }
@@ -948,7 +900,6 @@ h3 {
 .footer-grid > div:last-child {
   display: flex;
   flex-direction: column;
-
   align-items: flex-start;
   gap: 12px;
 }
@@ -960,7 +911,6 @@ h3 {
   color: #b8c5d7;
 
   border-top: 1px solid rgba(255, 255, 255, .15);
-
   font-size: 12px;
 }
 
@@ -971,17 +921,14 @@ h3 {
   padding: 90px 0 70px;
 
   background: var(--surface);
-
   border-bottom: 1px solid var(--border);
 }
 
 .page-hero h1 {
   max-width: 850px;
-
   margin: 20px 0;
 
   font-size: clamp(42px, 6vw, 68px);
-
   letter-spacing: -2px;
 }
 
@@ -996,9 +943,7 @@ h3 {
 
 .card-grid {
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
   gap: 22px;
 }
 
@@ -1026,15 +971,13 @@ h3 {
 }
 
 
-/* ABOUT PAGE: CAREER STORY */
+/* ABOUT PAGE */
 
 .about-story-grid {
   display: grid;
-
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: .8fr 1.2fr;
 
   gap: clamp(40px, 7vw, 100px);
-
   align-items: start;
 }
 
@@ -1042,7 +985,6 @@ h3 {
   margin-top: 18px;
 
   font-size: clamp(32px, 4vw, 48px);
-
   letter-spacing: -1.5px;
 }
 
@@ -1063,12 +1005,6 @@ h3 {
   margin-bottom: 0;
 }
 
-
-/* ==========================================================
-   ABOUT PAGE: PROFILE PHOTOGRAPH
-   NATURAL PROPORTIONS, NO STRETCHING
-   ========================================================== */
-
 .about-page-hero {
   padding: 85px 0;
 }
@@ -1078,10 +1014,9 @@ h3 {
 
   grid-template-columns:
     minmax(0, 1.3fr)
-    minmax(280px, 0.7fr);
+    minmax(280px, .7fr);
 
   align-items: center;
-
   gap: clamp(40px, 6vw, 90px);
 }
 
@@ -1103,8 +1038,8 @@ h3 {
 
   overflow: hidden;
 
-  border-radius: var(--radius-lg);
   border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
 
   box-shadow: var(--shadow-md);
   background: var(--surface-muted);
@@ -1117,16 +1052,11 @@ h3 {
   height: auto;
 
   aspect-ratio: auto;
-
   object-fit: contain;
 }
 
-
-/* ABOUT PAGE: ADDITIONAL COMPONENTS */
-
 .recommendation-more {
   margin-top: 32px;
-
   padding: 32px;
 
   background: var(--surface);
@@ -1144,7 +1074,6 @@ h3 {
   max-width: 650px;
 
   color: var(--text-muted);
-
   line-height: 1.8;
 }
 
@@ -1157,7 +1086,287 @@ h3 {
 }
 
 
-/* RESPONSIVE: SMALL DESKTOP AND TABLET */
+/* ==========================================================
+   EXPERIENCE PAGE
+   ========================================================== */
+
+.experience-timeline {
+  display: grid;
+  gap: 18px;
+}
+
+/* EXPANDABLE CARD */
+
+.experience-role {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.experience-role[open] {
+  border-color: #b8cbe5;
+  box-shadow: var(--shadow-md);
+}
+
+/* CARD HEADING */
+
+.experience-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 28px 32px;
+
+  cursor: pointer;
+  list-style: none;
+}
+
+.experience-summary::-webkit-details-marker {
+  display: none;
+}
+
+.experience-summary::marker {
+  content: "";
+}
+
+.experience-summary:hover {
+  background: #f9fbfe;
+}
+
+.experience-summary:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: -5px;
+}
+
+.experience-summary-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  gap: 7px;
+}
+
+.experience-dates {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  line-height: 1.5;
+}
+
+.experience-role-title {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--navy);
+
+  font-size: clamp(19px, 2.2vw, 25px);
+  font-weight: 750;
+
+  letter-spacing: -.5px;
+  line-height: 1.35;
+}
+
+.experience-company {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.experience-role-preview {
+  display: block;
+
+  max-width: 760px;
+  margin-top: 4px;
+
+  color: var(--text-muted);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* EXPAND AND COLLAPSE ICON */
+
+.experience-expand-icon {
+  position: relative;
+
+  display: block;
+  flex: 0 0 38px;
+
+  width: 38px;
+  height: 38px;
+
+  background: #edf3fc;
+
+  border: 1px solid #d8e5f7;
+  border-radius: 50%;
+}
+
+.experience-expand-icon::before,
+.experience-expand-icon::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  background: var(--blue);
+
+  transform: translate(-50%, -50%);
+}
+
+.experience-expand-icon::before {
+  width: 14px;
+  height: 2px;
+}
+
+.experience-expand-icon::after {
+  width: 2px;
+  height: 14px;
+
+  transition: transform .2s ease;
+}
+
+.experience-role[open] .experience-expand-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* EXPANDED CONTENT */
+
+.experience-role-body {
+  padding: 30px 32px 34px;
+
+  border-top: 1px solid var(--border);
+}
+
+.experience-role-body h3 {
+  margin: 0 0 14px;
+
+  color: var(--navy);
+
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.experience-role-body > p {
+  max-width: 820px;
+  margin-bottom: 26px;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.experience-role-body ul {
+  display: grid;
+  gap: 12px;
+
+  max-width: 900px;
+
+  margin: 0;
+  padding-left: 22px;
+}
+
+.experience-role-body li {
+  padding-left: 4px;
+
+  color: var(--text);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.experience-role-body li::marker {
+  color: var(--blue);
+}
+
+.experience-role-body li strong {
+  color: var(--navy);
+  font-weight: 750;
+}
+
+/* EXPERIENCE TAGS */
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 28px;
+}
+
+.experience-tags span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 10px;
+
+  color: var(--blue);
+  background: #edf3fc;
+
+  border: 1px solid #d8e5f7;
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: .5px;
+  line-height: 1.5;
+}
+
+/* EARLIER CAREER */
+
+.experience-earlier-role {
+  padding: 0 0 18px;
+  margin-bottom: 18px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-earlier-role:last-of-type {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.experience-earlier-role h4 {
+  margin-bottom: 8px;
+
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.experience-earlier-role p {
+  margin-bottom: 0;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================================
+   RESPONSIVE: TABLET
+   ========================================================== */
 
 @media (max-width: 1100px) {
 
@@ -1183,15 +1392,12 @@ h3 {
 
 }
 
-
-/* RESPONSIVE: ABOUT PAGE TABLET */
-
 @media (max-width: 1000px) {
 
   .about-hero-grid {
     grid-template-columns:
       minmax(0, 1fr)
-      minmax(220px, 0.8fr);
+      minmax(220px, .8fr);
 
     gap: 35px;
   }
@@ -1199,15 +1405,14 @@ h3 {
 }
 
 
-/* RESPONSIVE: MOBILE */
+/* ==========================================================
+   RESPONSIVE: MOBILE
+   ========================================================== */
 
 @media (max-width: 760px) {
 
   .container {
-    width: min(
-      calc(100% - 36px),
-      var(--container)
-    );
+    width: min(calc(100% - 36px), var(--container));
   }
 
   .header-inner {
@@ -1219,7 +1424,7 @@ h3 {
     display: none;
   }
 
-  /* HOMEPAGE HERO */
+  /* HOMEPAGE */
 
   .hero {
     padding: 72px 0 80px;
@@ -1234,7 +1439,6 @@ h3 {
     margin: 18px 0 24px;
 
     font-size: clamp(40px, 9vw, 58px);
-
     letter-spacing: -2px;
   }
 
@@ -1274,7 +1478,7 @@ h3 {
     font-size: 16px;
   }
 
-  /* METRICS */
+  /* ACHIEVEMENTS */
 
   .metric-grid {
     grid-template-columns: 1fr;
@@ -1285,7 +1489,7 @@ h3 {
     padding: 28px;
   }
 
-  /* EXPERIENCE */
+  /* HOMEPAGE EXPERIENCE */
 
   .feature-row {
     grid-template-columns: 1fr;
@@ -1329,7 +1533,6 @@ h3 {
 
   .footer-grid {
     grid-template-columns: 1fr;
-
     gap: 26px;
 
     padding-top: 40px;
@@ -1350,7 +1553,7 @@ h3 {
     font-size: 16px;
   }
 
-  /* ABOUT PAGE INTRODUCTION */
+  /* ABOUT PAGE */
 
   .about-page-hero {
     padding: 65px 0;
@@ -1364,11 +1567,8 @@ h3 {
   .about-hero-image {
     width: 100%;
     max-width: 340px;
-
     margin-inline: auto;
   }
-
-  /* ABOUT PAGE CAREER STORY */
 
   .about-story-grid {
     grid-template-columns: 1fr;
@@ -1383,10 +1583,74 @@ h3 {
     padding: 26px;
   }
 
+  /* EXPERIENCE PAGE */
+
+  .experience-timeline {
+    gap: 14px;
+  }
+
+  .experience-summary {
+    align-items: flex-start;
+
+    gap: 14px;
+    padding: 22px 20px;
+  }
+
+  .experience-summary-content {
+    gap: 6px;
+  }
+
+  .experience-dates {
+    font-size: 10px;
+  }
+
+  .experience-role-title {
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .experience-company {
+    font-size: 13px;
+  }
+
+  .experience-role-preview {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .experience-expand-icon {
+    flex-basis: 34px;
+
+    width: 34px;
+    height: 34px;
+  }
+
+  .experience-role-body {
+    padding: 24px 20px 28px;
+  }
+
+  .experience-role-body h3 {
+    font-size: 16px;
+  }
+
+  .experience-role-body > p {
+    font-size: 14px;
+  }
+
+  .experience-role-body li {
+    font-size: 14px;
+  }
+
+  .experience-tags span {
+    font-size: 9px;
+  }
+
 }
 
 
-/* RESPONSIVE: SMALL PHONES */
+/* ==========================================================
+   RESPONSIVE: SMALL PHONES
+   ========================================================== */
 
 @media (max-width: 380px) {
 
@@ -1418,10 +1682,20 @@ h3 {
     width: 100%;
   }
 
+  .experience-summary {
+    padding: 20px 16px;
+  }
+
+  .experience-role-body {
+    padding: 22px 16px 26px;
+  }
+
 }
 
 
-/* ACCESSIBILITY: REDUCED MOTION */
+/* ==========================================================
+   ACCESSIBILITY: REDUCED MOTION
+   ========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1439,356 +1713,15 @@ h3 {
 }
 
 
-/* ACCESSIBILITY: HIGH CONTRAST PREFERENCE */
+/* ==========================================================
+   ACCESSIBILITY: HIGH CONTRAST
+   ========================================================== */
 
 @media (prefers-contrast: more) {
 
   :root {
     --text-muted: #35445a;
     --border: #8997a9;
-  }
-
-}
-/* ==========================================================
-   EXPERIENCE PAGE
-   ========================================================== */
-
-.experience-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-
-/* EXPANDABLE CAREER CARDS */
-
-.experience-role {
-  overflow: hidden;
-
-  background: var(--surface);
-
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-
-  box-shadow: var(--shadow-sm);
-
-  transition:
-    border-color .2s ease,
-    box-shadow .2s ease;
-}
-
-.experience-role[open] {
-  border-color: #b9cce5;
-  box-shadow: var(--shadow-md);
-}
-
-
-/* CARD HEADER */
-
-.experience-summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 24px;
-
-  padding: 34px;
-
-  cursor: pointer;
-
-  list-style: none;
-}
-
-.experience-summary::-webkit-details-marker {
-  display: none;
-}
-
-.experience-summary::marker {
-  content: "";
-}
-
-.experience-summary:hover {
-  background: #f9fbfe;
-}
-
-.experience-summary:focus-visible {
-  outline: 3px solid var(--blue);
-  outline-offset: -5px;
-}
-
-.experience-summary-content {
-  display: flex;
-  flex-direction: column;
-
-  align-items: flex-start;
-
-  min-width: 0;
-  gap: 8px;
-}
-
-.experience-role-title {
-  display: block;
-
-  margin-top: 8px;
-
-  color: var(--navy);
-
-  font-size: clamp(21px, 2.4vw, 29px);
-  font-weight: 750;
-
-  letter-spacing: -.6px;
-  line-height: 1.3;
-}
-
-.experience-company {
-  color: var(--blue);
-
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.experience-role-preview {
-  max-width: 720px;
-
-  margin-top: 8px;
-
-  color: var(--text-muted);
-
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-
-/* EXPAND ICON */
-
-.experience-expand-icon {
-  display: grid;
-  place-items: center;
-
-  width: 44px;
-  height: 44px;
-
-  min-width: 44px;
-
-  color: var(--blue);
-
-  background: var(--surface-muted);
-
-  border: 1px solid var(--border);
-  border-radius: 50%;
-
-  font-size: 25px;
-  font-weight: 400;
-
-  transition:
-    transform .2s ease,
-    background .2s ease;
-}
-
-.experience-role[open] .experience-expand-icon {
-  transform: rotate(45deg);
-
-  background: #e8f0fc;
-}
-
-
-/* EXPANDED CONTENT */
-
-.experience-role-body {
-  padding: 32px 34px 38px;
-
-  border-top: 1px solid var(--border);
-}
-
-.experience-role-body > p {
-  max-width: 800px;
-
-  margin-bottom: 28px;
-
-  color: var(--text-muted);
-
-  font-size: 16px;
-  line-height: 1.9;
-}
-
-.experience-role-body h3 {
-  margin: 0 0 18px;
-
-  font-size: 18px;
-  font-weight: 750;
-}
-
-.experience-role-body ul {
-  display: grid;
-  gap: 16px;
-
-  max-width: 900px;
-
-  margin: 0;
-  padding-left: 22px;
-}
-
-.experience-role-body li {
-  padding-left: 6px;
-
-  color: var(--text);
-
-  font-size: 15px;
-  line-height: 1.85;
-}
-
-.experience-role-body li::marker {
-  color: var(--blue);
-}
-
-.experience-role-body li strong {
-  color: var(--navy);
-  font-weight: 750;
-}
-
-
-/* SKILLS AND EXPERTISE TAGS */
-
-.experience-tags {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 10px;
-
-  margin-top: 32px;
-}
-
-.experience-tags span {
-  display: inline-flex;
-  align-items: center;
-
-  padding: 8px 12px;
-
-  color: var(--blue);
-
-  background: #edf3fc;
-
-  border: 1px solid #d8e5f7;
-  border-radius: 7px;
-
-  font-size: 10px;
-  font-weight: 800;
-
-  letter-spacing: .6px;
-  line-height: 1.5;
-}
-
-
-/* EARLIER CAREER */
-
-.experience-earlier-role {
-  padding: 0 0 22px;
-  margin-bottom: 22px;
-
-  border-bottom: 1px solid var(--border);
-}
-
-.experience-earlier-role:last-of-type {
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-
-.experience-earlier-role h3 {
-  margin-bottom: 8px;
-}
-
-.experience-earlier-role p {
-  margin: 0;
-
-  color: var(--text-muted);
-
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-
-/* ACHIEVEMENTS GRID */
-
-.experience-achievements-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 20px;
-}
-
-
-/* TABLET */
-
-@media (max-width: 1000px) {
-
-  .experience-achievements-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 760px) {
-
-  .experience-timeline {
-    gap: 16px;
-  }
-
-  .experience-summary {
-    align-items: flex-start;
-
-    gap: 14px;
-    padding: 25px 22px;
-  }
-
-  .experience-role-title {
-    font-size: 21px;
-  }
-
-  .experience-company {
-    font-size: 14px;
-  }
-
-  .experience-role-preview {
-    font-size: 13px;
-  }
-
-  .experience-expand-icon {
-    width: 36px;
-    height: 36px;
-
-    min-width: 36px;
-
-    font-size: 22px;
-  }
-
-  .experience-role-body {
-    padding: 26px 22px 30px;
-  }
-
-  .experience-role-body > p {
-    font-size: 15px;
-  }
-
-  .experience-role-body li {
-    font-size: 14px;
-  }
-
-  .experience-tags {
-    gap: 8px;
-  }
-
-  .experience-tags span {
-    font-size: 9px;
-  }
-
-  .experience-achievements-grid {
-    grid-template-columns: 1fr;
-
-    gap: 16px;
   }
 
 }

@@ -2465,3 +2465,367 @@ h4 {
   }
 
 }
+/* ==========================================================
+   QUALIFICATIONS PAGE
+   BRANDING, CARDS AND ACCESSIBILITY FIXES
+   ========================================================== */
+
+
+/* SCREEN READER ONLY TEXT */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* FEATURED QUALIFICATION GRID */
+
+.qualification-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.qualification-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  min-width: 0;
+  padding: 34px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.qualification-feature-grid
+.qualification-feature:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.qualification-feature h3 {
+  margin: 0;
+  font-size: clamp(23px, 2.8vw, 31px);
+  letter-spacing: -0.8px;
+}
+
+.qualification-feature p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.qualification-feature .portfolio-project-link {
+  margin-top: auto;
+}
+
+
+/* FEATURED BRANDING */
+
+.qualification-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 44px;
+  margin-bottom: 8px;
+
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.qualification-brand span:not(.microsoft-mark) {
+  font-size: 12px;
+  align-self: flex-start;
+}
+
+.qualification-brand-itil {
+  color: #553394;
+}
+
+.qualification-brand-microsoft {
+  color: #323130;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.7px;
+}
+
+.qualification-brand-prince2 {
+  color: var(--navy);
+}
+
+
+/* MICROSOFT FOUR-SQUARE MARK */
+
+.microsoft-mark {
+  display: grid;
+  grid-template-columns: repeat(2, 10px);
+  grid-template-rows: repeat(2, 10px);
+  gap: 2px;
+
+  width: 22px;
+  height: 22px;
+}
+
+.microsoft-mark i {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+.microsoft-mark i:nth-child(1) {
+  background: #f25022;
+}
+
+.microsoft-mark i:nth-child(2) {
+  background: #7fba00;
+}
+
+.microsoft-mark i:nth-child(3) {
+  background: #00a4ef;
+}
+
+.microsoft-mark i:nth-child(4) {
+  background: #ffb900;
+}
+
+
+/* CERTIFICATION GRID */
+
+.qualification-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.qualification-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  padding: 28px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.qualification-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.qualification-mini-brand {
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.qualification-mini-itil {
+  color: #553394;
+}
+
+.qualification-mini-microsoft {
+  color: #323130;
+  font-weight: 650;
+}
+
+.qualification-mini-prince2 {
+  color: var(--navy);
+}
+
+.qualification-type {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+}
+
+.qualification-card h3 {
+  margin: 0 0 12px;
+
+  color: var(--navy);
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.qualification-card p {
+  margin: 0 0 24px;
+
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.qualification-card > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: auto;
+
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.qualification-card > a:hover {
+  text-decoration: underline;
+}
+
+
+/* FILTER BUTTONS */
+
+.qualification-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.qualification-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 44px;
+  padding: 10px 16px;
+
+  color: var(--navy);
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.qualification-filter span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+
+  background: var(--surface-muted);
+  border-radius: 999px;
+
+  font-size: 11px;
+}
+
+.qualification-filter:hover {
+  border-color: var(--blue);
+}
+
+.qualification-filter[aria-pressed="true"] {
+  color: #ffffff;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.qualification-filter[aria-pressed="true"] span {
+  color: var(--blue);
+  background: #ffffff;
+}
+
+
+/* CURRENTLY STUDYING */
+
+.qualification-progress {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 10px 16px;
+
+  color: var(--blue);
+  background: #ffffff;
+
+  border: 1px solid #d8e5f7;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+
+/* EDUCATION */
+
+.qualification-education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 760px) {
+
+  .qualification-feature-grid,
+  .qualification-grid,
+  .qualification-education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qualification-feature-grid
+  .qualification-feature:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .qualification-feature {
+    padding: 26px;
+  }
+
+  .qualification-card {
+    padding: 26px;
+  }
+
+  .qualification-study-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .qualification-brand {
+    font-size: 23px;
+  }
+
+  .qualification-filter {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+
+}

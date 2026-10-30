@@ -33,9 +33,9 @@
   <!-- SHARED STYLESHEET -->
 
   <link
-  rel="stylesheet"
-  href="/Manderson-sandbox/assets/css/styles.css?v=3"
->
+    rel="stylesheet"
+    href="{{ '/assets/css/styles.css' | relative_url }}?v=8"
+  >
 
 </head>
 
@@ -71,6 +71,14 @@
 
   <script
     src="{{ '/assets/js/main.js' | relative_url }}"
+    defer
+  ></script>
+
+
+  <!-- QUALIFICATIONS FILTERING -->
+
+  <script
+    src="{{ '/assets/js/qualifications.js' | relative_url }}"
     defer
   ></script>
 

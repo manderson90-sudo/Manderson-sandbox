@@ -1,0 +1,122 @@
+<!-- ======================================================
+     MICHAEL ANDERSON
+     SHARED WEBSITE HEADER
+
+     Navigation links are managed in:
+     _data/navigation.yml
+     ====================================================== -->
+
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <!-- BRAND AND PROFILE PHOTOGRAPH -->
+
+    <a
+      class="brand"
+      href="{{ '/' | relative_url }}"
+      aria-label="Michael Anderson, homepage"
+    >
+
+      <img
+        src="{{ '/assets/images/profile.jpg' | relative_url }}"
+        alt=""
+        class="brand-photo"
+        width="44"
+        height="44"
+      >
+
+      <span class="brand-name">
+        Michael Anderson
+        <small>TECHNOLOGY LEADER</small>
+      </span>
+
+    </a>
+
+
+    <!-- DESKTOP NAVIGATION -->
+
+    <nav
+      class="desktop-nav"
+      aria-label="Primary navigation"
+    >
+
+      {% for item in site.data.navigation %}
+
+        <a
+          href="{{ item.url | relative_url }}"
+          {% if page.url == item.url %}
+            aria-current="page"
+          {% endif %}
+        >
+          {{ item.title }}
+        </a>
+
+      {% endfor %}
+
+    </nav>
+
+
+    <!-- HEADER ACTIONS -->
+
+    <div class="header-actions">
+
+      <a
+        class="header-link"
+        href="https://www.linkedin.com/in/michaelanderson90"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+        <span aria-hidden="true">↗</span>
+      </a>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button
+        id="menu-button"
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open navigation menu"
+      >
+        Menu
+        <span aria-hidden="true">☰</span>
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- MOBILE NAVIGATION -->
+
+  <nav
+    id="mobile-nav"
+    class="mobile-nav"
+    aria-label="Mobile navigation"
+    hidden
+  >
+
+    <div class="container mobile-nav-inner">
+
+      {% for item in site.data.navigation %}
+
+        <a
+          href="{{ item.url | relative_url }}"
+          {% if page.url == item.url %}
+            aria-current="page"
+          {% endif %}
+        >
+          {{ item.title }}
+        </a>
+
+      {% endfor %}
+
+    </div>
+
+  </nav>
+
+</header>

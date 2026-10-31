@@ -3041,3 +3041,47 @@ h4 {
   }
 
 }
+/* ==========================================================
+   CASE STUDY: CONTENT SPACING IMPROVEMENTS
+   ========================================================== */
+
+/* Add breathing room after groups of cards */
+
+.case-study-brand-grid {
+  margin-top: 32px;
+  margin-bottom: 42px;
+}
+
+/* Improve spacing between cards */
+
+.case-study-brand-grid {
+  gap: 18px;
+}
+
+/* Give paragraphs following cards more space */
+
+.case-study-brand-grid + p {
+  margin-top: 32px;
+}
+
+/* Improve paragraph readability */
+
+.case-study-section > p {
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 760px) {
+
+  .case-study-brand-grid {
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .case-study-brand-grid + p {
+    margin-top: 28px;
+  }
+
+}

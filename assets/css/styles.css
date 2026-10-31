@@ -3085,3 +3085,80 @@ h4 {
   }
 
 }
+/* ==========================================================
+   CASE STUDY: DELIVERABLE CARD IMPROVEMENTS
+   ========================================================== */
+
+/* Improve spacing between card groups and surrounding text */
+
+.case-study-deliverables {
+  display: grid;
+  gap: 18px;
+  margin: 30px 0 42px;
+}
+
+/* Ensure paragraphs following cards have breathing room */
+
+.case-study-deliverables + p {
+  margin-top: 36px;
+}
+
+/* Improve card layout for cards with direct strong headings */
+
+.case-study-deliverable:has(> strong) {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+}
+
+/* Card headings */
+
+.case-study-deliverable > strong {
+  display: block;
+  margin: 0;
+
+  color: var(--navy);
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+/* Card descriptions */
+
+.case-study-deliverable > p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Mobile improvements */
+
+@media (max-width: 760px) {
+
+  .case-study-deliverables {
+    gap: 16px;
+    margin: 28px 0 38px;
+  }
+
+  .case-study-deliverables + p {
+    margin-top: 32px;
+  }
+
+  .case-study-deliverable:has(> strong) {
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .case-study-deliverable > strong {
+    font-size: 17px;
+  }
+
+  .case-study-deliverable > p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+}

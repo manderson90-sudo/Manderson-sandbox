@@ -1725,6 +1725,8 @@ h4 {
   }
 
 }
+
+
 /* ==========================================================
    PROJECTS OVERVIEW
    ========================================================== */
@@ -1858,6 +1860,7 @@ h4 {
   font-size: 12px;
   font-weight: 600;
 }
+
 
 /* FEATURED PROJECT */
 
@@ -2017,6 +2020,15 @@ h4 {
   line-height: 1.85;
 }
 
+.case-study-intro p {
+  margin-bottom: 24px;
+  line-height: 1.85;
+}
+
+.case-study-intro p:last-child {
+  margin-bottom: 0;
+}
+
 .case-study-highlights {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2055,6 +2067,7 @@ h4 {
   font-size: 12px;
   line-height: 1.6;
 }
+
 
 /* MAIN CASE STUDY LAYOUT */
 
@@ -2095,30 +2108,41 @@ h4 {
 
 .case-study-section > p {
   max-width: 750px;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 
   color: var(--text);
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 .case-study-section > p:last-child {
   margin-bottom: 0;
 }
 
+
 /* DELIVERY ITEMS */
+
+/*
+   Updated to support the American Golf case study
+   and other cards containing headings and paragraphs.
+*/
 
 .case-study-deliverables {
   display: grid;
   gap: 18px;
+
+  margin-top: 30px;
+  margin-bottom: 36px;
 }
 
 .case-study-deliverable {
-  display: grid;
-  grid-template-columns: 38px minmax(0, 1fr);
-  gap: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 
-  padding: 26px;
+  min-width: 0;
+  padding: 28px 30px;
 
   background: var(--surface);
   border: 1px solid var(--border);
@@ -2132,26 +2156,25 @@ h4 {
   letter-spacing: .7px;
 }
 
-.case-study-deliverable h3 {
-  margin-bottom: 12px;
+.case-study-deliverable > strong,
+.case-study-deliverable > h3 {
+  display: block;
+  margin: 0;
 
   color: var(--navy);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 750;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
-.case-study-deliverable p {
-  margin-bottom: 14px;
+.case-study-deliverable > p {
+  margin: 0;
 
   color: var(--text-muted);
   font-size: 14px;
-  line-height: 1.85;
+  line-height: 1.8;
 }
 
-.case-study-deliverable p:last-child {
-  margin-bottom: 0;
-}
 
 /* INTERNAL BRANDING */
 
@@ -2188,6 +2211,7 @@ h4 {
   line-height: 1.5;
 }
 
+
 /* RESULTS */
 
 .case-study-result {
@@ -2195,8 +2219,8 @@ h4 {
   flex-direction: column;
   gap: 8px;
 
-  max-width: 420px;
-  margin: 0 0 30px;
+  max-width: 100%;
+  margin: 30px 0 36px;
   padding: 30px;
 
   background: #edf3fc;
@@ -2217,6 +2241,24 @@ h4 {
   font-size: 14px;
   font-weight: 650;
 }
+
+.case-study-result h3 {
+  margin: 8px 0 12px;
+
+  color: var(--navy);
+  font-size: clamp(21px, 2.5vw, 27px);
+  line-height: 1.35;
+}
+
+.case-study-result p {
+  margin: 0 0 16px;
+  line-height: 1.8;
+}
+
+.case-study-result p:last-child {
+  margin-bottom: 0;
+}
+
 
 /* SIDEBAR */
 
@@ -2268,6 +2310,7 @@ h4 {
   font-weight: 650;
   line-height: 1.7;
 }
+
 
 /* CASE STUDY FOOTER */
 
@@ -2383,6 +2426,11 @@ h4 {
     font-size: 16px;
   }
 
+  .case-study-intro p {
+    margin-bottom: 24px;
+    line-height: 1.85;
+  }
+
   .case-study-highlights {
     grid-template-columns: 1fr;
   }
@@ -2408,22 +2456,52 @@ h4 {
   }
 
   .case-study-section {
-    padding-bottom: 48px;
-    margin-bottom: 48px;
+    padding-bottom: 52px;
+    margin-bottom: 52px;
   }
 
   .case-study-section h2 {
+    margin-bottom: 28px;
     font-size: 30px;
+    line-height: 1.25;
   }
 
   .case-study-section > p {
-    font-size: 15px;
+    margin-bottom: 26px;
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .case-study-section > p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* IMPROVED MOBILE CARD SPACING */
+
+  .case-study-deliverables {
+    gap: 16px;
+    margin-top: 28px;
+    margin-bottom: 38px;
   }
 
   .case-study-deliverable {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 26px 24px;
+  }
+
+  .case-study-deliverable > strong,
+  .case-study-deliverable > h3 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .case-study-deliverable > p {
+    font-size: 15px;
+    line-height: 1.8;
   }
 
   .case-study-brand-grid {
@@ -2436,7 +2514,9 @@ h4 {
   }
 
   .case-study-result {
-    padding: 24px;
+    padding: 26px 24px;
+    margin-top: 28px;
+    margin-bottom: 36px;
   }
 
   .case-study-sidebar-card {
@@ -2465,6 +2545,8 @@ h4 {
   }
 
 }
+
+
 /* ==========================================================
    QUALIFICATIONS PAGE
    BRANDING, CARDS AND ACCESSIBILITY FIXES
@@ -2829,6 +2911,8 @@ h4 {
   }
 
 }
+
+
 /* ==========================================================
    CONTACT PAGE
    ========================================================== */
@@ -2924,6 +3008,7 @@ h4 {
   font-size: 17px;
   line-height: 1.85;
 }
+
 
 /* CONTACT PAGE: MOBILE */
 
